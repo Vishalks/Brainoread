@@ -1,0 +1,16 @@
+Package: BrainRead
+Type: Package
+Title: An interface for Binary classification using R, Java, and Python ML algorothms
+Version: 0.1
+Date: 2016-04-09
+Author: Chandrakant Maher, Vishal Sarda, Nishant Borude
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: This package perform train and test on given dataset for multiple machine learning binary classification algorithms.
+    Package tells you the best possible algorithm that will have the great accuracy for your dataset.
+    Package includes most of the binary classification algorithms from R(caret), java(Weka), python(scikit-learn).
+License: GPL
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Imports: caret, caTools, rJava
+Depends: R (>= 2.7.0), rJava (>= 0.5-0)
+SystemRequirements: Java (>= 1.5)
