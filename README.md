@@ -78,4 +78,4 @@ both are false then java methods performs both training and testing (used for st
 sampling). If train is true then only train model and save in model in file, and if test is
 true then read model saved in file test the dataset and write prediction in result_prob.csv
 
-Demo script is written in test.r file with dementia dataset (demen.csv)
+*Demo script is written in test.r file with dementia dataset (demen.csv)*
