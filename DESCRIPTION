@@ -1,4 +1,4 @@
-Package: BrainRead
+Package: BrainoRead
 Type: Package
 Title: An interface for Binary classification using R, Java, and Python ML algorothms
 Version: 0.1
