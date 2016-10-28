@@ -1,25 +1,61 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Brainoread by nishantborude</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Brainoread</h1>
-      <h2 class="project-tagline">This source code is of a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.</h2>
-      <a href="https://github.com/nishantborude/Brainoread" class="btn">View on GitHub</a>
-      <a href="https://github.com/nishantborude/Brainoread/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/nishantborude/Brainoread/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/nishantborude/Brainoread">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/nishantborude/Brainoread/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/nishantborude/Brainoread/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-    <section class="main-content">
-      <h1>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Brainoread</h1>
+          <p>This source code is of a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/nishantborude">nishantborude</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a id="features-extracted-from-mri-scans" class="anchor" href="#features-extracted-from-mri-scans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features extracted from MRI scans</h1>
+
+<h2>
+<a id="fnc-features" class="anchor" href="#fnc-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FNC Features</h2>
+
+<p>Functional Network Connectivity (FNC) are relationship values that compress the general association between free cerebrum maps after some time.Therefore, the FNC feature gives a picture of the availability design after sometime between autonomous systems (or brain maps). These FNC features were obtained by Group Independent Component Analysis (GICA) of MRI images. The MRI chosen for the task were of both, healthy people and people suﬀering from Schizophrenia. An arrangement of cerebrum maps and timecourses relating to these mind maps were achieved by the GICA disintegration of the fMRI information. These timecourses demonstrated the action level of the comparing cerebrum map at every point in time. The FNC features are the relationships between these timecourses. For interpretation, FNC demonstrates a subject’s general level of ”synchronicity” between mind areas.As this information is derived from functional MRI scans, FNCs are considered a functional modality feature. They describe patterns of the brain function.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19800028/6355c83c-9d17-11e6-82b7-cf34fbda4eba.png" alt=""></p>
+
+<h2>
+<a id="sbm-features" class="anchor" href="#sbm-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SBM Features</h2>
+
+<p>Source-Based Morphometry (SBM) loadings relate to the weights of brain maps obtained by applying Independent Component Analysis (ICA) on the gray-matter concentration maps.Gray-matter is the outer layer of the brain. Most of the signal processing of the brain occurs in gray-matter region.For interpretation, gray-matter concentrationindictes the ”computational power” available in a certain region of the brain.ICA investigation of basic MRI for gray-matter focus gives autonomous mind maps whose expres sion levels ﬂuctuate as indicated by the subjects. Basically, a close to zero stacking for a given ICA-determined mind map demonstrates that the cerebrum locales delineated in that guide are modest present in the subject (i.e., the presence of gray-matter concentration areas in those regions are very low in that subject). As this information is derived from structural MRI scans, SBM loadings are considered a structural modality feature. They describe patterns of the brain structure.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19799291/8abb8aa0-9d13-11e6-839e-93dcbd1365a7.png" alt=""></p>
+
+<h1>
 <a id="uses-state-of-the-art-machine-learning-techniques" class="anchor" href="#uses-state-of-the-art-machine-learning-techniques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uses State of the Art Machine Learning Techniques</h1>
 
 <p>Most of the algorithms are used individually in the first iterations. The results generated from top models can be sorted according to prediction accuracy and then they can be combined further for increasing accuracy. </p>
@@ -42,16 +78,18 @@
 <ul>
 <li>Recursive Feature Elimination (RFE) </li>
 <li>Simulated Annealing Feature Selection (SAFS)</li>
-<li>varImp for Random Forest 
-<img src="https://drive.google.com/open?id=0B1YOkXH48N9ldy1hcjhTLXd4M0E" alt="">
-<img src="https://drive.google.com/open?id=0B1YOkXH48N9lY1djY0I2ZVdGSzQ" alt="">
-</li>
+<li>varImp for Random Forest </li>
 </ul>
 
-<h1>
-<a id="system-design" class="anchor" href="#system-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System Design</h1>
+<h3>
+<a id="fnc-feature-selection" class="anchor" href="#fnc-feature-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FNC Feature Selection</h3>
 
-<p><img src="https://drive.google.com/open?id=0B1YOkXH48N9lVDRZVFRSdW01bEE" alt=""></p>
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798727/79ebf960-9d10-11e6-8dc0-eac3f261e8d8.png" alt=""></p>
+
+<h3>
+<a id="sbm-feature-selection" class="anchor" href="#sbm-feature-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SBM Feature Selection</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798729/7a2bf1b4-9d10-11e6-8aeb-3689df07ad21.png" alt=""></p>
 
 <h1>
 <a id="list-of-algorithms" class="anchor" href="#list-of-algorithms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of Algorithms</h1>
@@ -71,8 +109,25 @@
 <li>gbm (Gradient Boosting Machines)</li>
 </ul>
 
+<h1>
+<a id="system-design" class="anchor" href="#system-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System Design</h1>
+
+<p>The following is a flow chart that explains the work flow of the model.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798733/7a766ea6-9d10-11e6-8338-e65616915420.jpg" alt=""></p>
+
+<h1>
+<a id="results-and-analysis" class="anchor" href="#results-and-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results and Analysis</h1>
+
 <h2>
-<a id="visible-methods" class="anchor" href="#visible-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visible methods</h2>
+<a id="plot-for-analysis-of-dementia-patients" class="anchor" href="#plot-for-analysis-of-dementia-patients" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plot for Analysis of Dementia Patients</h2>
+
+<p>Below figure depicts the classification of Dementia patients plot against two features namely AWF and nWBV. We used a visualization function to give a graphical output of the data. The plot in red is people not suffering from Dementia whereas the blue plot shows the people suffering from the disease.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19800029/6359ef2a-9d17-11e6-82a5-fdf744e89a57.png" alt=""></p>
+
+<h1>
+<a id="visible-methods" class="anchor" href="#visible-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visible methods</h1>
 
 <h3>
 <a id="1-getbestmodelx-y-iter--100-verboseiter--false" class="anchor" href="#1-getbestmodelx-y-iter--100-verboseiter--false" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) getBestModel(x, y, iter = 100, verboseIter = FALSE){…}</h3>
@@ -127,8 +182,8 @@ both class probabilities.</p>
 class, model-name and environment information. This function reads that file and
 returns a vector same as getTrainModel() returns.</p>
 
-<h2>
-<a id="hidden-methods" class="anchor" href="#hidden-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hidden Methods</h2>
+<h1>
+<a id="hidden-methods" class="anchor" href="#hidden-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hidden Methods</h1>
 
 <h3>
 <a id="1-getmodellist" class="anchor" href="#1-getmodellist" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) getModelList(){…}</h3>
@@ -185,15 +240,10 @@ sampling). If train is true then only train model and save in model in file, and
 true then read model saved in file test the dataset and write prediction in result_prob.csv</p>
 
 <p><em>Demo script is written in test.r file with dementia dataset (demen.csv)</em></p>
+      </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/nishantborude/Brainoread">Brainoread</a> is maintained by <a href="https://github.com/nishantborude">nishantborude</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
