@@ -1,49 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Brainoread by nishantborude</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <title>Brainoread by nishantborude</title>
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/nishantborude/Brainoread">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/nishantborude/Brainoread/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/nishantborude/Brainoread/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+    <header>
+      <div class="inner">
+        <h1>Brainoread</h1>
+        <h2>This source code is of a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.</h2>
+        <a href="https://github.com/nishantborude/Brainoread" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Brainoread</h1>
-          <p>This source code is of a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/nishantborude">nishantborude</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h1>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
 <a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h1>
 
 <p>We have created a generic binary classiﬁer which we currently use for diagnosis of patients suﬀering from brain disorders. However, the tool is powerful enough to work on any binary class classiﬁcation problem. On prediction of 119,748 test subjects for Schizophrenia, we got a maximum accuracy of <strong>91.78%</strong>. And on cross validation of Dementia dataset, we got the maximum accuracy of close to <strong>100%</strong>. 
 This tool can be easily ported to hospitals and can be used for prediction of any data provided the model is initially trained using similar known dataset. Initially the tool takes time for training all models and then tunes those using diﬀerent tuning parameters, and once the model is trained; prediction can be done in very less time. It provides the advantage of saving the model so it can be reused any number of times. 
-Moreover, the prediction accuracy of the model can be increased by manually adding training subjects to the dataset</p>
+Moreover, the prediction accuracy of the model can be increased by manually adding training subjects to the dataset.</p>
 
 <h1>
 <a id="features-extracted-from-mri-scans" class="anchor" href="#features-extracted-from-mri-scans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features extracted from MRI scans</h1>
@@ -247,10 +237,25 @@ sampling). If train is true then only train model and save in model in file, and
 true then read model saved in file test the dataset and write prediction in result_prob.csv</p>
 
 <p><em>Demo script is written in test.r file with dementia dataset (demen.csv)</em></p>
-      </section>
+        </section>
 
+        <aside id="sidebar">
+          <a href="https://github.com/nishantborude/Brainoread/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/nishantborude/Brainoread/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/nishantborude/Brainoread"></a> is maintained by <a href="https://github.com/nishantborude">nishantborude</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
