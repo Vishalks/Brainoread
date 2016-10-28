@@ -20,17 +20,56 @@
 
     <section class="main-content">
       <h1>
-<a id="graphically-intuitive-tool" class="anchor" href="#graphically-intuitive-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Graphically intuitive tool</h1>
+<a id="uses-state-of-the-art-machine-learning-techniques" class="anchor" href="#uses-state-of-the-art-machine-learning-techniques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uses State of the Art Machine Learning Techniques</h1>
+
+<p>Most of the algorithms are used individually in the first iterations. The results generated from top models can be sorted according to prediction accuracy and then they can be combined further for increasing accuracy. </p>
+
+<h2>
+<a id="k-fold-cross-validation" class="anchor" href="#k-fold-cross-validation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>k-fold Cross Validation</h2>
+
+<p>Cross Validation is the method where we divide the entire training data into parts. k is the parameter through which we decide how many such parts should be made. Of them, we use 1 part for testing and k – 1 parts for training. Such training – testing cycle is repeated until all parts are dropped for testing i.e. the loop runs k times. For a value of k = 10, we divide the dataset into 10 parts; train for 9 parts and test for 1 part. Such process is repeated until every single part is used for testing and remaining 9 for training. Thus, the loop iterates 10 times. </p>
+
+<h2>
+<a id="stratified-sampling" class="anchor" href="#stratified-sampling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stratified Sampling</h2>
+
+<p>For determining the best model we initially do stratified sampling of the training data. It is similar to k-fold cross validation. Here, we divide the entire data set into ratio of 70:30. We use the createDataPartition function of Caret package and pass parameter as 0.7. The training dataset is divided into random 70% and 30% of which we use 70% for training and 30% for testing. We repeat this procedure of randomly dividing the dataset into 70% and 30% for 100 iterations. The accuracy for each iteration is recorded and finally, average accuracy of prediction of data is calculated by taking the average of 100 accuracies. </p>
 
 <h2>
 <a id="feature-selection" class="anchor" href="#feature-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Feature Selection</h2>
 
-<p><img src="Brainoread/Images/Rplot02.png" alt="FNC Feature Selection"></p>
+<p>Feature Selection includes selection of most important features from a list of all features. Feature Selection helps the model to solve the problem of overfitting the training set. That is, it reduces variance from the train set. The methods used for feature selection are: </p>
+
+<ul>
+<li>Recursive Feature Elimination (RFE) </li>
+<li>Simulated Annealing Feature Selection (SAFS)</li>
+<li>varImp for Random Forest 
+<img src="https://drive.google.com/open?id=0B1YOkXH48N9ldy1hcjhTLXd4M0E" alt="">
+<img src="https://drive.google.com/open?id=0B1YOkXH48N9lY1djY0I2ZVdGSzQ" alt="">
+</li>
+</ul>
 
 <h1>
-<a id="brainoread" class="anchor" href="#brainoread" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Brainoread</h1>
+<a id="system-design" class="anchor" href="#system-design" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>System Design</h1>
 
-<p>This source code is a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.</p>
+<p><img src="https://drive.google.com/open?id=0B1YOkXH48N9lVDRZVFRSdW01bEE" alt=""></p>
+
+<h1>
+<a id="list-of-algorithms" class="anchor" href="#list-of-algorithms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of Algorithms</h1>
+
+<p>Our package uses a list of all classification algorithms available in the mentioned packages. A few of the algorithms used for the project from Caret package are as follows:</p>
+
+<ul>
+<li>gpls (Generic Partial Least Squares)</li>
+<li>svm (Support Vector Machines)</li>
+<li>nb (Naive Bayes)</li>
+<li>nnet (Neural Network)</li>
+<li>lda (Linear Discriminant Analysis)</li>
+<li>rf (Random Forest)</li>
+<li>wsrf (Weighted Subspace Random Forest)</li>
+<li>LMT (Logistic Model Trees)</li>
+<li>glm (Generalized Linear Model)</li>
+<li>gbm (Gradient Boosting Machines)</li>
+</ul>
 
 <h2>
 <a id="visible-methods" class="anchor" href="#visible-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visible methods</h2>
