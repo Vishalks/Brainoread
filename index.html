@@ -63,7 +63,7 @@ Moreover, the prediction accuracy of the model can be increased by manually addi
 <p><img src="https://cloud.githubusercontent.com/assets/10834446/19799291/8abb8aa0-9d13-11e6-839e-93dcbd1365a7.png" alt=""></p>
 
 <h1>
-<a id="uses-state-of-the-art-machine-learning-techniques" class="anchor" href="#uses-state-of-the-art-machine-learning-techniques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Uses State of the Art Machine Learning Techniques</h1>
+<a id="methods-for-highly-accurate-results" class="anchor" href="#methods-for-highly-accurate-results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods for Highly Accurate Results</h1>
 
 <p>Most of the algorithms are used individually in the first iterations. The results generated from top models can be sorted according to prediction accuracy and then they can be combined further for increasing accuracy. </p>
 
@@ -124,6 +124,13 @@ Moreover, the prediction accuracy of the model can be increased by manually addi
 <p><img src="https://cloud.githubusercontent.com/assets/10834446/19798733/7a766ea6-9d10-11e6-8338-e65616915420.jpg" alt=""></p>
 
 <h1>
+<a id="auc-metric" class="anchor" href="#auc-metric" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AUC Metric</h1>
+
+<p>We use AUC accuracy metric for calculation of prediction accuracy. AUC stands for Area Under the Curve of Receiver Operating Characteristic (ROC) Curve. The curve is basically a plot of true positive rate vs. false positive rate, where true positive rate is also known as sensitivity of the model and is calculated as the proportion of positive class members that are correctly classified by the model and false positive rate is calculated as (1 - Specificity) where specificity is known as true negative rate calculated as the proportion of negative class members that are correctly classified by the model as such. Fig 4 shows a sample AUC graph for determination of Nondemented people from our dataset. The area under the curve is the accuracy of prediction of Non demented people. The maximum accuracy, thus, is the area under the straight line from (0,1) to (1,1) which is 1.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798941/750a2f60-9d11-11e6-991f-6f73e4525806.jpeg" alt=""></p>
+
+<h1>
 <a id="results-and-analysis" class="anchor" href="#results-and-analysis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results and Analysis</h1>
 
 <h2>
@@ -132,6 +139,52 @@ Moreover, the prediction accuracy of the model can be increased by manually addi
 <p>Below figure depicts the classification of Dementia patients plot against two features namely AWF and nWBV. We used a visualization function to give a graphical output of the data. The plot in red is people not suffering from Dementia whereas the blue plot shows the people suffering from the disease.</p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/10834446/19800029/6359ef2a-9d17-11e6-82a5-fdf744e89a57.png" alt=""></p>
+
+<h2>
+<a id="basic-training-accuracies" class="anchor" href="#basic-training-accuracies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Training Accuracies</h2>
+
+<p>The following table gives the training accuracy for all individual models for Schizophrenia dataset. The training data is divided into three parts namely FNC only, SBM only and both, FNC and SBM. The maximum accuracy for the each model is taken. Two methods for training the data are ‘cv’ i.e. cross validation and ‘boot’.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19815375/2145f50e-9d60-11e6-836f-d613a0f6325d.png" alt=""></p>
+
+<h2>
+<a id="final-models-with-maximum-prediction-accuracy" class="anchor" href="#final-models-with-maximum-prediction-accuracy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Final Models with Maximum Prediction Accuracy</h2>
+
+<p>The following table shows the maximum Kaggle score, i.e. the AUC accuracy for individual models on prediction of test data. We used stratified sampling and k-fold cross validation while training to increase the results. The most accurate models are selected from this analysis and are used for further progress of the project. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19815545/0b29cccc-9d61-11e6-8f2e-41ad0c38ee2f.png" alt=""></p>
+
+<h2>
+<a id="graph-plots-for-accuracy-metrics" class="anchor" href="#graph-plots-for-accuracy-metrics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Graph Plots for Accuracy Metrics</h2>
+
+<h3>
+<a id="auc" class="anchor" href="#auc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AUC</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798940/7508dcaa-9d11-11e6-8ced-37105389ecdd.jpeg" alt=""></p>
+
+<h3>
+<a id="sensitivity" class="anchor" href="#sensitivity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Sensitivity</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19815777/077c2754-9d62-11e6-88cb-dcd2dee2bbd5.png" alt=""></p>
+
+<h3>
+<a id="specificity" class="anchor" href="#specificity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Specificity</h3>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19815778/077d76ea-9d62-11e6-9b26-6945ccc2e1f9.png" alt=""></p>
+
+<h3>
+<a id="positive-predicted-values" class="anchor" href="#positive-predicted-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Positive Predicted Values</h3>
+
+<p>Positive Predictive Value (PPV) is the extent of positively characterized cases that were really positive. It is the ability of the model to predict positive values accurately. The formula for calculating PPV is  PPV = (number of true positives) / ((number of true positives) + (number of false positives)) </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798726/79e90110-9d10-11e6-9f63-e8460e612053.jpeg" alt=""></p>
+
+<h3>
+<a id="negative-predicted-values" class="anchor" href="#negative-predicted-values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Negative Predicted Values</h3>
+
+<p>Negative Predictive Value (NPV) is the extent of adversely arranged cases that were really negative. It is the ability of the model to predict negative values accurately. NPV is calculated as NPV = (number of true negatives) / ((number of true negatives) + (number of false negatives))</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/10834446/19798725/79e7644a-9d10-11e6-8129-14983fdc2a92.jpeg" alt=""></p>
 
 <h1>
 <a id="visible-methods" class="anchor" href="#visible-methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Visible methods</h1>
