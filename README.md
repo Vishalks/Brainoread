@@ -1,5 +1,5 @@
 # Brainoread
-This source code is a tool which is a standalone binary classifier using machine learning algorithms from R and Java. Currently used for diagnosis of patients suffering from brain disorders.
+This source code is a tool which is a standalone binary classifier using machine learning algorithms from R, Java and Python. Currently used for diagnosis of patients suffering from brain disorders.
 
 ## Visible methods
 ### 1) getBestModel(x, y, iter = 100, verboseIter = FALSE){…}
